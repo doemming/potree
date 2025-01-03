@@ -119,7 +119,7 @@
 				//mesh1 = new THREE.Mesh( geometry );
 				// mx,my,mz=
 				//mesh1.position.set(589951.587, 231428.213, 710.634);				                   
-				mesh1.position.set(372841.615, 5626149.215, 62.645);
+				mesh1.position.set(0,0,0);
 				mesh1.castShadow = false;
 				mesh1.receiveShadow = false;
 				mesh1.scale.multiplyScalar(1);
@@ -172,7 +172,7 @@
 				let parentNode = "other";
 
 				let bunny1ID = tree.jstree('create_node', parentNode, { 
-						"text": "Bunny 1", 
+						"text": plyName, 
 						"icon": `${Potree.resourcePath}/icons/triangle.svg`,
 						"data": mesh1
 					}, 
