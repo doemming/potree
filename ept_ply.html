@@ -42,17 +42,17 @@
 		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
 		import {PLYLoader} from "./libs/three.js/loaders/PLYLoader.js";
 
-		viewer.setEDLEnabled(true);
-		viewer.setFOV(60);
-		viewer.setPointBudget(1_000_000);
+		viewer.setEDLEnabled(true)
+		viewer.setFOV(30);
+		viewer.setPointBudget(2_000_000);
 		viewer.loadSettingsFromURL();
 		//viewer.setDescription("Loading Entwine-generated EPT format");
 		viewer.loadGUI(() => {
 			viewer.setLanguage('en');
-			//$("#menu_appearance").next().show();
-			$("#menu_tools").next().show();
+			$("#menu_appearance").next().show();
+			//$("#menu_tools").next().show();
 			$("#menu_scene").next().show();
-			//viewer.toggleSidebar();
+			viewer.toggleSidebar();
 		});
 
 		var eptPath = "./pointclouds/lion_takanawa_ept_laz/ept.json";
@@ -255,6 +255,7 @@
 		}
 
 		{ // LIGHTS
+			/*
 			const directional = new THREE.DirectionalLight( 0xffffff, 1.0);
 			directional.position.set( 372841.615, 5626149.215, 300 );
 			directional.lookAt(372841.615, 5626149.215, 50);
@@ -263,6 +264,7 @@
 
 			viewer.scene.scene.add(directional);
 			viewer.scene.scene.add(ambient);
+			*/
 		}				
 		// mesh code end
 		
